@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+
+.ms_up_content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #eaeaea;
+    padding: 10px;
+}
+
+.ms_mine_avatar{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.ms_icon{
+    font-size: 20px;
+    color: darkgray;
+}

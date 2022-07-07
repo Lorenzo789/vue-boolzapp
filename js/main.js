@@ -1,7 +1,9 @@
 /**
  * popolare dinamicamente la parte sinistra della pagina
  * regolare il css della stessa
+ * 
  * funzione per il click
+ * 
  * fare lo stesso procedimento per la parte destra 
  * occuparsi della visualizzazione dei messaggi all'interno della chat
  */

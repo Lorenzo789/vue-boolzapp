@@ -13,11 +13,45 @@
 
     <!-- My Css -->
     <link rel="stylesheet" href="./css/style.css">
+
+    <!-- VUE -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
     <title>Boolzapp</title>
 </head>
 <body>
-    
+    <header>
+        <h1 class="text-center fw-bold">Boolzapp</h1>
+    </header>
 
+    <main class="container" id="root">
+        <div class="row">
+            <div class="ms_left_side col-4">
+                <div class="ms_up_content">
+
+                    <div class="d-flex align-items-center">
+                        <img class="ms_mine_avatar" src="./img/avatar_io.jpg" alt="mio avatar">
+                        <h6 class="fw-semibold px-2">Sofia</h6>
+                    </div>
+                    
+                    <div class="ms_icon">
+                        <i class="fa-solid fa-circle-notch pe-2"></i>
+                        <i class="fa-solid fa-message pe-2"></i>
+                        <i class="fa-solid fa-ellipsis-vertical pe-2"></i>
+                    </div>
+                </div>
+
+                <div class="ms_notifications">
+                    
+                </div>
+
+                <input type="text" placeholder="cerca o inizia una nuova chat">
+                <div class="ms_chat"></div>
+            </div>
+
+            <div class="ms_right_side col-8"></div>
+        </div>
+    </main>
     <script src="./js/main.js"></script>
 </body>
 </html>

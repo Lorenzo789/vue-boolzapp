@@ -80,6 +80,10 @@
     position: relative;
 }
 
+.ms_active{
+    background-color: lightgray;
+}
+
 .ms_pos{
     font-size: 10px;
     color: darkgray;
@@ -92,3 +96,14 @@
     overflow-y: scroll;
 }
 /* SECTION DOWN CONTENT */
+
+/* SECTION RIGHT SIDE */
+.ms_right_side{
+    display: flex;
+    align-items: flex-start;
+    background-color: #eaeaea;
+    padding: 10px;
+    border-left: 1px solid lightgray;
+    height: 70px;
+}
+/* SECTION RIGHT SIDE */

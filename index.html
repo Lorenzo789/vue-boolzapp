@@ -30,14 +30,15 @@
     </header>
 
     <main class="container" id="root">
-
-        <!-- SECTION LEFT CONTENT -->
-        <section class="mb-5">
-            <div class="row">
-                <div class="ms_left_side col-4">
-
+        <div class="row">
+    
+            <!-- SECTION LEFT CONTENT -->
+            <section class="col-4 px-0 mx-0">
+                <div class="ms_left_side">
+    
                     <!-- SECTION UP CONTENT -->
                     <section>
+    
                         <div class="ms_up_content">
     
                             <div class="d-flex align-items-center">
@@ -72,12 +73,13 @@
                                     aria-label="Example text with button addon" aria-describedby="button-addon1">
                             </div>
                         </div>
+    
                     </section>
                     <!-- SECTION UP CONTENT -->
     
                     <!-- SECTION DOWN CONTENT -->
-                    <section class="ms_scroll">
-                        <div class="ms_chat" v-for="(chat, index) in contacts">
+                    <section class="ms_scroll pb-5">
+                        <div class="ms_chat" :class="{'ms_active': index === activeChat}" v-for="(chat, index) in contacts">
                             <img class="ms_mine_avatar me-2" :src="'./img/avatar' + chat.avatar + '.jpg'" alt="">
                             <div>
                                 {{ chat.name }}
@@ -88,13 +90,21 @@
                     </section>
                     <!-- SECTION DOWN CONTENT -->
                 </div>
-            </div>
-        </section>
-        <!-- SECTION LEFT CONTENT -->
-
-
-        
-            <div class="ms_right_side col-8"></div>
+            </section>
+            <!-- SECTION LEFT CONTENT -->
+    
+            <!-- SECTION RIGHT SIDE -->
+            <section class="col-8 px-0 mx-0">
+                <div class="ms_right_side">
+                    <img class="ms_mine_avatar" :src="'./img/avatar' + contacts[activeChat].avatar + '.jpg'" alt="">
+                    <div>
+                        {{ contacts[activeChat].name }}
+                        <p class="ms_fs">Ultimo messaggio inviato</p>
+                    </div>
+                </div>
+            </section>
+            <!-- SECTION RIGHT SIDE -->
+        </div>
     </main>
     <script src="./js/main.js"></script>
 </body>

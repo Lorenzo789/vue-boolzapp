@@ -13,6 +13,7 @@ const root = new Vue(
     {
         el: '#root',
         data: {
+            activeChat: 0,
             contacts: [
                 {
                     name: 'Michele',

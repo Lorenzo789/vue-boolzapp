@@ -98,12 +98,18 @@
 /* SECTION DOWN CONTENT */
 
 /* SECTION RIGHT SIDE */
-.ms_right_side{
+.ms_up_right_side{
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     background-color: #eaeaea;
     padding: 10px;
     border-left: 1px solid lightgray;
     height: 70px;
+}
+
+.ms_icon_marg{
+    font-size: 20px;
+    color: darkgray;
+    margin-left: auto;
 }
 /* SECTION RIGHT SIDE */

@@ -95,12 +95,20 @@
     
             <!-- SECTION RIGHT SIDE -->
             <section class="col-8 px-0 mx-0">
-                <div class="ms_right_side">
-                    <img class="ms_mine_avatar" :src="'./img/avatar' + contacts[activeChat].avatar + '.jpg'" alt="">
+                <div class="ms_up_right_side">
+
+                    <img class="ms_mine_avatar me-2" :src="'./img/avatar' + contacts[activeChat].avatar + '.jpg'" alt="">
                     <div>
                         {{ contacts[activeChat].name }}
-                        <p class="ms_fs">Ultimo messaggio inviato</p>
+                        <p class="ms_fs">Ultimo accesso oggi alle 12.00</p>
                     </div>
+
+                    <div class="ms_icon_marg">
+                        <i class="fa-solid fa-magnifying-glass pe-2"></i>
+                        <i class="fa-solid fa-paperclip pe-2"></i>
+                        <i class="fa-solid fa-ellipsis-vertical pe-2"></i>
+                    </div>
+
                 </div>
             </section>
             <!-- SECTION RIGHT SIDE -->

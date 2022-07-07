@@ -120,7 +120,7 @@
 .ms_down_right_side{
     background-image: url('../img/mine.jpg');
     overflow-y: scroll;
-    height: 83vh;
+    height: 770px;
 }
 
 .ms_message_sent{
@@ -143,5 +143,18 @@
     position: absolute;
     bottom: 5px;
     right: 10px;
+}
+
+.ms_new_message{
+    padding: 10px;
+    background-color: #eaeaea;
+}
+
+.ms_emoticon{
+    background-color: #eaeaea;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 25px;
+    color: gray;
 }
 /* SECTION RIGHT SIDE */

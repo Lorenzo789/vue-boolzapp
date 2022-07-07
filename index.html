@@ -116,11 +116,21 @@
 
                 <!-- RIGHT SIDE DOWN CONTENT -->
                 <div class="ms_down_right_side">
+
                     <div v-for="element in contacts[activeChat].messages">
                         <div :class="{'ms_message_sent': element.status == 'sent', 'ms_message_receive': element.status == 'received'}" class="col-6 position-relative">
                             {{ element.message }}
                             <span class="ms_hour_pos">{{ element.date }}</span>
                         </div>
+                    </div>
+                </div>
+
+                <div class="ms_new_message">
+                    <div class="input-group">
+                        <span class="ms_emoticon"><i class="fa-regular fa-face-smile"></i></span>
+                        <input type="text" class="form-control" placeholder="Scrivi un messaggio" aria-label="Example text with button addon"
+                            aria-describedby="button-addon1">
+                        <span class="ms_emoticon"><i class="fa-solid fa-microphone"></i></span>
                     </div>
                 </div>
                 <!-- RIGHT SIDE DOWN CONTENT -->

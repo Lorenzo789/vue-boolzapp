@@ -95,6 +95,8 @@
     
             <!-- SECTION RIGHT SIDE -->
             <section class="col-8 px-0 mx-0">
+
+                <!-- RIGHT SIDE UP CONTENT -->
                 <div class="ms_up_right_side">
 
                     <img class="ms_mine_avatar me-2" :src="'./img/avatar' + contacts[activeChat].avatar + '.jpg'" alt="">
@@ -110,6 +112,19 @@
                     </div>
 
                 </div>
+                <!-- RIGHT SIDE UP CONTENT -->
+
+                <!-- RIGHT SIDE DOWN CONTENT -->
+                <div class="ms_down_right_side">
+                    <div v-for="element in contacts[activeChat].messages">
+                        <div :class="{'ms_message_sent': element.status == 'sent', 'ms_message_receive': element.status == 'received'}" class="col-6 position-relative">
+                            {{ element.message }}
+                            <span class="ms_hour_pos">{{ element.date }}</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- RIGHT SIDE DOWN CONTENT -->
+
             </section>
             <!-- SECTION RIGHT SIDE -->
         </div>

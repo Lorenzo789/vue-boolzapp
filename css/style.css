@@ -98,6 +98,8 @@
 /* SECTION DOWN CONTENT */
 
 /* SECTION RIGHT SIDE */
+
+/* RIGHT SIDE UP CONTENT */
 .ms_up_right_side{
     display: flex;
     align-items: center;
@@ -111,5 +113,35 @@
     font-size: 20px;
     color: darkgray;
     margin-left: auto;
+}
+/* RIGHT SIDE UP CONTENT */
+
+/* RIGHT SIDE DOWN CONTENT */
+.ms_down_right_side{
+    background-image: url('../img/mine.jpg');
+    overflow-y: scroll;
+    height: 83vh;
+}
+
+.ms_message_sent{
+    background-color: #d5f9ba;
+    padding: 20px;
+    margin: 20px 50px 20px auto;
+    border-radius: 10px;
+}
+
+.ms_message_receive{
+    background-color: white;
+    padding: 20px;
+    margin: 20px 0px 20px 50px;
+    border-radius: 10px;
+}
+
+.ms_hour_pos{
+    font-size: 10px;
+    color: darkgray;
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
 }
 /* SECTION RIGHT SIDE */

@@ -6,7 +6,9 @@
 
 
 
+/*  SECTION UP CONTENT  */
 
+/* UP CONTENT */
 .ms_up_content{
     display: flex;
     align-items: center;
@@ -25,7 +27,9 @@
     font-size: 20px;
     color: darkgray;
 }
+/* UP CONTENT */
 
+/* NOTIFICATION */
 .ms_notifications{
     display: flex;
     align-items: center;
@@ -43,7 +47,9 @@
     text-align: center;
     height: 50px;
 }
+/* NOTIFICATION */
 
+/* INPUT RESEARCH */
 .ms_fs{
     font-size: 13px;
     color: darkgray;
@@ -61,3 +67,28 @@
     border: 1px solid lightgray;
     color: lightgray;
 }
+/* INPUT RESEARCH */
+
+/* SECTION UP CONTENT */
+
+/* SECTION DOWN CONTENT */
+.ms_chat{
+    padding: 10px;
+    display: flex;
+    align-items: end;
+    border-bottom: 1px solid lightgray;
+    position: relative;
+}
+
+.ms_pos{
+    font-size: 10px;
+    color: darkgray;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+
+.ms_scroll{
+    overflow-y: scroll;
+}
+/* SECTION DOWN CONTENT */

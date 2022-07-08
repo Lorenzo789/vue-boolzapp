@@ -221,23 +221,29 @@ const root = new Vue(
             },
 
             filterContact: function(){
-                for (let index = 0; index < this.contacts.length; index++) {
 
+                let index = 0
+                
+                while (index < this.contacts.length) {
+                    
                     const inputContact = this.searchContact.toLowerCase();
-
+                    
                     const contactName = this.contacts[index].name.toLowerCase();
-
-                    if (contactName.includes(inputContact)) {
-
-                        console.log('CIAO');
-                        this.contacts[index].visible = true;
-
-                    } else {
-
+                    
+                    if (!contactName.includes(inputContact)) {
+                        
+                        console.log('NON TROVATO');
                         this.contacts[index].visible = false;
+                        
+                    } else {
+                        
+                        console.log('TROVATO');
+                        this.contacts[index].visible = true;
                     };
                     
-                };
+                    index++
+                }
+
             }
         }
     }

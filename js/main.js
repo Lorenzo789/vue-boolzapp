@@ -6,6 +6,10 @@
  * 
  * fare lo stesso procedimento per la parte destra 
  * occuparsi della visualizzazione dei messaggi all'interno della chat
+ * 
+ * @keyUp qualcosa per il pulsante enter inserire nuovo messaggio verde
+ * 
+ * Risposta dall’interlocutore: ad ogni inserimento di un messaggio, l’utente riceverà un “ok” come risposta, che apparirà dopo 1 secondo.
  */
 
 
@@ -13,6 +17,7 @@ const root = new Vue(
     {
         el: '#root',
         data: {
+            newMessage: document.getElementById('new-message'),
             activeChat: 0,
             contacts: [
                 {
@@ -37,9 +42,9 @@ const root = new Vue(
                         }
                     ],
                 },
+
                 {
-                    name: 'Fabio',
-                    avatar: '_2',
+                    
                     visible: true,
                     messages: [
                         {
@@ -182,7 +187,13 @@ const root = new Vue(
         methods: 
         {
             selectDifferentChat: function(index){
-                this.activeChat = index
+                this.activeChat = index;
+            },
+
+            insertNewMessage: function(){
+                if ( keyCode == 13 ) {
+                    console.log('ciao');
+                }
             }
         }
     }

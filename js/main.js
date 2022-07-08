@@ -203,6 +203,17 @@ const root = new Vue(
 
                 this.newText= '';
             },
+
+            messageIA: function(indexActive){
+                if (this.newText != '') {
+                    const messageIa = {
+                        date: '08/07/2022 15:38:00',
+                        message: 'OK!!',
+                        status: 'received'
+                    }
+                    this.contacts[indexActive].messages.push(messageIa);  
+                }
+            }
         }
     }
 );

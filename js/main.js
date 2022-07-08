@@ -184,7 +184,7 @@ const root = new Vue(
                 }
             ],
 
-            newMessage: '',
+            newText: '',
         },
 
         methods: 
@@ -193,14 +193,16 @@ const root = new Vue(
                 this.activeChat = index;
             },
 
-            insertNewMessage: function (messageText) {
+            insertNewMessage: function (messageText, activeIndex) {
                 const newMessage = {
-                    date: '08/07/2022',
+                    date: '08/07/2022 12:38:00',
                     message: messageText,
                     status: 'sent'
                 }
-                this.contacts.messages.push(newMessage);
-            }
+                this.contacts[activeIndex].messages.push(newMessage);
+
+                this.newText= '';
+            },
         }
     }
 );

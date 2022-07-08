@@ -4,7 +4,9 @@
     box-sizing: border-box;
 }
 
-
+.ms_bord_row{
+    border: 1px solid lightgray;
+}
 
 /*  SECTION UP CONTENT  */
 
@@ -76,12 +78,15 @@
     padding: 10px;
     display: flex;
     align-items: end;
-    border-bottom: 1px solid lightgray;
     position: relative;
 }
 
-.ms_active{
+.ms_chat:hover{
     background-color: lightgray;
+}
+
+.ms_active{
+    background-color: darkgray;
 }
 
 .ms_pos{
@@ -94,6 +99,7 @@
 
 .ms_scroll{
     overflow-y: scroll;
+    padding-bottom: 55px;
 }
 /* SECTION DOWN CONTENT */
 
@@ -120,7 +126,7 @@
 .ms_down_right_side{
     background-image: url('../img/mine.jpg');
     overflow-y: scroll;
-    height: 770px;
+    height: 742px;
 }
 
 .ms_message_sent{

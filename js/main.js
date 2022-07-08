@@ -177,6 +177,13 @@ const root = new Vue(
                     ],
                 }
             ]
+        },
+
+        methods: 
+        {
+            selectDifferentChat: function(index){
+                this.activeChat = index
+            }
         }
     }
 );

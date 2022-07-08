@@ -25,12 +25,8 @@
 </head>
 
 <body>
-    <header>
-        <h1 class="text-center fw-bold mb-5">Boolzapp</h1>
-    </header>
-
     <main class="container" id="root">
-        <div class="row">
+        <div class="row mt-3 mb-4 ms_bord_row">
     
             <!-- SECTION LEFT CONTENT -->
             <section class="col-4 px-0 mx-0">
@@ -78,8 +74,8 @@
                     <!-- SECTION UP CONTENT -->
     
                     <!-- SECTION DOWN CONTENT -->
-                    <section class="ms_scroll pb-5">
-                        <div class="ms_chat" :class="{'ms_active': index === activeChat}" v-for="(chat, index) in contacts">
+                    <section class="ms_scroll">
+                        <div class="ms_chat" @click="selectDifferentChat(index)" :class="{'ms_active': index === activeChat}" v-for="(chat, index) in contacts">
                             <img class="ms_mine_avatar me-2" :src="'./img/avatar' + chat.avatar + '.jpg'" alt="">
                             <div>
                                 {{ chat.name }}

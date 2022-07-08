@@ -185,6 +185,7 @@ const root = new Vue(
             ],
 
             newText: '',
+            searchContact: '',
         },
 
         methods: 
@@ -209,14 +210,34 @@ const root = new Vue(
             messageIa: function (activeIndex) {
                 const messageIa = {
                     date: '08/07/2022 15:38:00',
-                    message: 'OK!!',
+                    message: 'Yes Skarbrand My Lord!!',
                     status: 'received'
                 }
                 this.contacts[activeIndex].messages.push(messageIa);
             },
 
             timeRespondIa: function(activeIndex){
-                setTimeout(() => {this.messageIa(activeIndex)}, 500);
+                setTimeout(() => {this.messageIa(activeIndex)}, 3000);
+            },
+
+            filterContact: function(){
+                for (let index = 0; index < this.contacts.length; index++) {
+
+                    const inputContact = this.searchContact.toLowerCase();
+
+                    const contactName = this.contacts[index].name.toLowerCase();
+
+                    if (contactName.includes(inputContact)) {
+
+                        console.log('CIAO');
+                        this.contacts[index].visible = true;
+
+                    } else {
+
+                        this.contacts[index].visible = false;
+                    };
+                    
+                };
             }
         }
     }

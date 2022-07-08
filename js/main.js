@@ -202,19 +202,21 @@ const root = new Vue(
                 this.contacts[activeIndex].messages.push(newMessage);
 
                 this.newText= '';
+
+                this.timeRespondIa(activeIndex);
             },
 
-            messageIa: function (indexActive) {
+            messageIa: function (activeIndex) {
                 const messageIa = {
                     date: '08/07/2022 15:38:00',
                     message: 'OK!!',
                     status: 'received'
                 }
-                this.contacts[indexActive].messages.push(messageIa);
+                this.contacts[activeIndex].messages.push(messageIa);
             },
 
-            timeRespondIa: function(){
-                setTimeout(() => {this.messageIa(indexActive)}, 300);
+            timeRespondIa: function(activeIndex){
+                setTimeout(() => {this.messageIa(activeIndex)}, 500);
             }
         }
     }

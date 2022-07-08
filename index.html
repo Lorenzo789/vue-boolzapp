@@ -76,7 +76,8 @@
     
                     <!-- SECTION DOWN CONTENT -->
                     <section class="ms_scroll">
-                        <div class="ms_chat" @click="selectDifferentChat(index)" :class="{'ms_active': index === activeChat}" v-for="(chat, index) in contacts">
+                        <div class="ms_chat" @click="selectDifferentChat(index)" :class="{'ms_active': index === activeChat}"
+                            v-for="(chat, index) in contacts">
                             <img class="ms_mine_avatar me-2" :src="'./img/avatar' + chat.avatar + '.jpg'" alt="">
                             <div>
                                 {{ chat.name }}

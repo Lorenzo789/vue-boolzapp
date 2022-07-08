@@ -242,8 +242,10 @@ const root = new Vue(
                     };
                     
                     index++
+                    
                 }
-
+                
+                this.searchContact= '';
             }
         }
     }

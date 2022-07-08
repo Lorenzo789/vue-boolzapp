@@ -16,8 +16,8 @@
 const root = new Vue(
     {
         el: '#root',
-        data: {
-            newMessage: document.getElementById('new-message'),
+        data: 
+        {           
             activeChat: 0,
             contacts: [
                 {
@@ -44,7 +44,8 @@ const root = new Vue(
                 },
 
                 {
-                    
+                    name: 'Fabio',
+                    avatar: '_2',
                     visible: true,
                     messages: [
                         {
@@ -181,7 +182,9 @@ const root = new Vue(
                         }
                     ],
                 }
-            ]
+            ],
+
+            newMessage: '',
         },
 
         methods: 
@@ -190,10 +193,13 @@ const root = new Vue(
                 this.activeChat = index;
             },
 
-            insertNewMessage: function(){
-                if ( keyCode == 13 ) {
-                    console.log('ciao');
+            insertNewMessage: function (messageText) {
+                const newMessage = {
+                    date: '08/07/2022',
+                    message: messageText,
+                    status: 'sent'
                 }
+                this.contacts.messages.push(newMessage);
             }
         }
     }

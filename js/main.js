@@ -214,7 +214,7 @@ const root = new Vue(
             },
 
             timeRespondIa: function(){
-                setTimeout(this.messageIa(), 3000);
+                setTimeout(() => {this.messageIa(indexActive)}, 300);
             }
         }
     }

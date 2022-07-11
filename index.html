@@ -121,15 +121,14 @@
                 <div class="ms_down_right_side">
 
                     <div v-for="(element, index) in contacts[activeChat].messages">
-                        <div class="col-6 position-relative" :class="{'ms_message_sent': element.status == 'sent', 'ms_message_receive': element.status == 'received', 
-                            'd-none': deleteMessage == true && dropDownIconIndex == index}">
+                        <div class="col-6 position-relative" :class="{'ms_message_sent': element.status == 'sent', 'ms_message_receive': element.status == 'received'}">
                             {{ element.message }}
                             <span class="ms_hour_pos">{{ element.date }}</span>
                             <span @click="dropDownMenu(index)" class="ms_dropdown"><i class="fa-solid fa-angle-down"></i></span>
 
                             <div class="ms_dropdown_menu" :class="{ 'd-block': dropDownIconClicked == true && dropDownIconIndex == index }">
                                 <a class="mb-0 d-block">Message Info</a>
-                                <a class="mb-0 d-block" @click="deleteSelectedMessage(element, index)">Delete Message</a>
+                                <a class="mb-0 d-block" @click="deleteSelectedMessage(index)">Delete Message</a>
                             </div>
                         </div>
                     </div>

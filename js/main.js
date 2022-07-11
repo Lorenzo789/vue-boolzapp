@@ -191,8 +191,6 @@ const root = new Vue(
             dropDownIconClicked: false,
 
             dropDownIconIndex: 0,
-
-            deleteMessage: false,
         },
 
         methods: 
@@ -231,10 +229,10 @@ const root = new Vue(
 
                 let index = 0
                 
+                const inputContact = this.searchContact.toLowerCase();
+
                 while (index < this.contacts.length) {
-                    
-                    const inputContact = this.searchContact.toLowerCase();
-                    
+                     
                     const contactName = this.contacts[index].name.toLowerCase();
                     
                     if (!contactName.includes(inputContact)) {
@@ -261,19 +259,18 @@ const root = new Vue(
 
                     this.dropDownIconClicked = true;
 
-                  } else {
+                } else {
 
                     this.dropDownIconClicked = false;
 
-                  }
+                }
+
             },
 
-            deleteSelectedMessage: function(element, index){
+            deleteSelectedMessage: function(index){
 
-                this.deleteMessage = true;
-
-                console.log('ELIMINATO');
-
+                this.contacts[this.activeChat].messages.splice(index, 1);
+                
             }
         }
     }

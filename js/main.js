@@ -192,7 +192,7 @@ const root = new Vue(
 
             dropDownIconIndex: 0,
 
-            delete: false,
+            deleteMessage: false,
         },
 
         methods: 
@@ -268,9 +268,9 @@ const root = new Vue(
                   }
             },
 
-            deleteMessage: function(element, index){
+            deleteSelectedMessage: function(element, index){
 
-                this.delete = true;
+                this.deleteMessage = true;
 
                 console.log('ELIMINATO');
 

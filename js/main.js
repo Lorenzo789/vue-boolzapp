@@ -248,7 +248,13 @@ const root = new Vue(
             },
 
             dropDownMenu: function(){
-                this.dropDownIconClicked = true
+                if (!this.dropDownIconClicked) {
+
+                    this.dropDownIconClicked = true;
+                  } else {
+                    
+                    this.dropDownIconClicked = false;
+                  }
             },
         }
     }

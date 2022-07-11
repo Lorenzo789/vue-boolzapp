@@ -196,12 +196,17 @@ const root = new Vue(
         methods: 
         {
             selectDifferentChat: function(index){
+
                 this.activeChat = index;
+
+                this.dropDownIconClicked = false;
+
+                this.dropDownIconIndex = 0;
             },
 
             insertNewMessage: function (messageText, activeIndex) {
                 const newMessage = {
-                    date: '08/07/2022 12:38:00',
+                    date: moment().format('DD:MM:YYYY, HH:mm:s'),
                     message: messageText,
                     status: 'sent'
                 }
@@ -214,7 +219,7 @@ const root = new Vue(
 
             messageIa: function (activeIndex) {
                 const messageIa = {
-                    date: '08/07/2022 15:38:00',
+                    date: moment().format('DD:MM:YYYY, HH:mm:s'),
                     message: 'Yes Skarbrand My Lord!!',
                     status: 'received'
                 }
@@ -255,15 +260,7 @@ const root = new Vue(
 
                 this.dropDownIconIndex = index;
 
-                if (!this.dropDownIconClicked) {
-
-                    this.dropDownIconClicked = true;
-
-                } else {
-
-                    this.dropDownIconClicked = false;
-
-                }
+                this.dropDownIconClicked = !this.dropDownIconClicked;
 
             },
 
@@ -271,7 +268,7 @@ const root = new Vue(
 
                 this.contacts[this.activeChat].messages.splice(index, 1);
                 
-            }
+            },
         }
     }
 );

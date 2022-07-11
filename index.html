@@ -120,11 +120,11 @@
                 <!-- RIGHT SIDE DOWN CONTENT -->
                 <div class="ms_down_right_side">
 
-                    <div v-for="element in contacts[activeChat].messages">
+                    <div v-for="(element, index) in contacts[activeChat].messages">
                         <div :class="{'ms_message_sent': element.status == 'sent', 'ms_message_receive': element.status == 'received'}" class="col-6 position-relative">
                             {{ element.message }}
                             <span class="ms_hour_pos">{{ element.date }}</span>
-                            <span @click="dropDownMenu" class="ms_dropdown"><i class="fa-solid fa-angle-down"></i></span>
+                            <span @click="dropDownMenu(index)" class="ms_dropdown"><i class="fa-solid fa-angle-down"></i></span>
 
                             <div class="ms_dropdown_menu" :class="{ 'd-block': dropDownIconClicked == true }">
                                 <p class="mb-0">Message Info</p>

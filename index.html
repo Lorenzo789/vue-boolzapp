@@ -127,8 +127,8 @@
                             <span @click="dropDownMenu(index)" class="ms_dropdown"><i class="fa-solid fa-angle-down"></i></span>
 
                             <div class="ms_dropdown_menu" :class="{ 'd-block': dropDownIconClicked == true && dropDownIconIndex == index }">
-                                <p class="mb-0">Message Info</p>
-                                <p>Delete Message</p>
+                                <a class="mb-0 d-block">Message Info</a>
+                                <a class="mb-0 d-block" @click="deleteMessage(element.message, index)">Delete Message</a>
                             </div>
                         </div>
                     </div>

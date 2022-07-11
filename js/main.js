@@ -185,9 +185,14 @@ const root = new Vue(
             ],
 
             newText: '',
+
             searchContact: '',
+
             dropDownIconClicked: false,
+
             dropDownIconIndex: 0,
+
+            delete: false,
         },
 
         methods: 
@@ -262,6 +267,14 @@ const root = new Vue(
 
                   }
             },
+
+            deleteMessage: function(element, index){
+
+                this.delete = true;
+
+                console.log('ELIMINATO');
+
+            }
         }
     }
 );

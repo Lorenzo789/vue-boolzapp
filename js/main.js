@@ -186,6 +186,7 @@ const root = new Vue(
 
             newText: '',
             searchContact: '',
+            dropDownIconClicked: false,
         },
 
         methods: 
@@ -232,12 +233,10 @@ const root = new Vue(
                     
                     if (!contactName.includes(inputContact)) {
                         
-                        console.log('NON TROVATO');
                         this.contacts[index].visible = false;
                         
                     } else {
                         
-                        console.log('TROVATO');
                         this.contacts[index].visible = true;
                     };
                     
@@ -246,7 +245,11 @@ const root = new Vue(
                 }
                 
                 this.searchContact= '';
-            }
+            },
+
+            dropDownMenu: function(){
+                this.dropDownIconClicked = true
+            },
         }
     }
 );

@@ -18,6 +18,11 @@
     <!-- My Css -->
     <link rel="stylesheet" href="./css/style.css">
 
+    <!-- MOMENT JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+    integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+    crossorigin="anonymous"></script>
+
     <!-- VUE -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 
@@ -119,6 +124,12 @@
                         <div :class="{'ms_message_sent': element.status == 'sent', 'ms_message_receive': element.status == 'received'}" class="col-6 position-relative">
                             {{ element.message }}
                             <span class="ms_hour_pos">{{ element.date }}</span>
+                            <span @click="dropDownMenu" class="ms_dropdown"><i class="fa-solid fa-angle-down"></i></span>
+
+                            <div class="ms_dropdown_menu" :class="{ 'd-block': dropDownIconClicked == true }">
+                                <p class="mb-0">Message Info</p>
+                                <p>Delete Message</p>
+                            </div>
                         </div>
                     </div>
                 </div>

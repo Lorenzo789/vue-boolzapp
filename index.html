@@ -126,7 +126,7 @@
                             <span class="ms_hour_pos">{{ element.date }}</span>
                             <span @click="dropDownMenu(index)" class="ms_dropdown"><i class="fa-solid fa-angle-down"></i></span>
 
-                            <div class="ms_dropdown_menu" :class="{ 'd-block': dropDownIconClicked == true }">
+                            <div class="ms_dropdown_menu" :class="{ 'd-block': dropDownIconClicked == true && dropDownIconIndex == index }">
                                 <p class="mb-0">Message Info</p>
                                 <p>Delete Message</p>
                             </div>

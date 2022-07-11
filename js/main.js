@@ -187,6 +187,7 @@ const root = new Vue(
             newText: '',
             searchContact: '',
             dropDownIconClicked: false,
+            dropDownIconIndex: 0,
         },
 
         methods: 
@@ -247,13 +248,18 @@ const root = new Vue(
                 this.searchContact= '';
             },
 
-            dropDownMenu: function(){
+            dropDownMenu: function(index){
+
+                this.dropDownIconIndex = index;
+
                 if (!this.dropDownIconClicked) {
 
                     this.dropDownIconClicked = true;
+
                   } else {
-                    
+
                     this.dropDownIconClicked = false;
+
                   }
             },
         }
